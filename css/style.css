@@ -496,6 +496,16 @@ canvas {
   padding-top: 30px;
 }
 
+
+.kid_left {
+  width: 35%;
+}
+
+.kid_right {
+  width: 35%;
+}
+
+
 @media (max-width: 991px) {
   h1 {
     text-shadow: none;
