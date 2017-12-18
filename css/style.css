@@ -214,6 +214,7 @@ canvas {
 }
 
 .black-heading {
+  padding-top: 15px;
   font-family: 'Open Sans', sans-serif;
   color: #000;
   font-weight: 400;
@@ -358,7 +359,6 @@ canvas {
   background-color: #000;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
-  z-index: 100;
 }
 
 .rsvp {
@@ -490,6 +490,10 @@ canvas {
   color: #000;
   font-size: 0.6em;
   font-weight: 700;
+}
+
+.notice {
+  padding-top: 30px;
 }
 
 @media (max-width: 991px) {
