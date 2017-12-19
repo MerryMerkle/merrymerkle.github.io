@@ -51,7 +51,18 @@
         <div id="tree-hook" class="w-col w-col-6 w-col-small-6 w-col-tiny-6 w-hidden-tiny">
         </div>
         <div id="leaderboard-hook" class="w-col w-col-6 w-col-small-6 w-col-tiny-12">
-          leaderboard
+            <table id="leaderboard">
+              <tr>
+                <th>Donor</th>
+                <th>Value</th>
+                <th>Name</th>
+              </tr>
+              <tr v-for="leader in leaderboard" >
+                <td>{{ leader.donor }}</td>
+                <td>{{ leader.value }}</td>
+                <td>{{ leader.name }}</td>
+              </tr>
+            </table>
         </div>
       </div>
     </div>
