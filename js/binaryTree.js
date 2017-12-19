@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     var tooltipHtml = function (data) {
         // @TODO - make sure we don't get XSS'd here
-        return data.value
+        return data.value + "</br>" + data.address;
     }
 
     /**
@@ -145,7 +145,8 @@ $(document).ready(function () {
     for(i = 0; i < 31; i++) {
         initData.push({
             text: 'Loading...',
-            value: '0.0'
+            value: '0.0',
+            address: "0x01234556"
         })
     }
 
