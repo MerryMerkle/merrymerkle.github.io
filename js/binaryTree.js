@@ -33,7 +33,6 @@ $(document).ready(function () {
     .append('svg')
     .attr('width', w)
     .attr('height', h)
-    .on('click', function() { updateTree(initData)})
 
     // Define the div for the tooltip
     var div = example.append("div")
@@ -54,8 +53,8 @@ $(document).ready(function () {
                     .duration(200)
                     .style("opacity", .9);
                 div .html(tooltipHtml(data))
-                    .style("left", (d3.event.pageX) + "px")
-                    .style("top", (d3.event.pageY - 1) + "px");
+                    .style("left",  d3.select(this).attr("cx") + "px")
+                    .style("top", d3.select(this).attr("cy") + "px");
                 })
             .on("mouseout", function(d) {
                 div.transition()
@@ -75,8 +74,8 @@ $(document).ready(function () {
                     .duration(200)
                     .style("opacity", .9);
                 div .html(tooltipHtml(data))
-                    .style("left", (d3.event.pageX) + "px")
-                    .style("top", (d3.event.pageY - 1) + "px");
+                    .style("left", d3.select(this).attr("cx") + "px")
+                    .style("top", d3.select(this).attr("cy") + "px");
                 })
             .on("mouseout", function(d) {
                 div.transition()
