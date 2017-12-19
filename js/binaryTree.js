@@ -1,4 +1,4 @@
-var LEADERBOARD = 'LEADERBOARD'
+var TREE_LEADERBOARD = 'TREE_LEADERBOARD'
 var TIER_REACHED = 'TIER_REACHED'
 
 $(document).ready(function () {
@@ -154,7 +154,7 @@ $(document).ready(function () {
     generateCoordinates(hook.width() / 2.0, hook.height() * 0.15);
     initTree(initData);
 
-    window.socket.on(LEADERBOARD, function (data) {
+    window.socket.on(TREE_LEADERBOARD, function (data) {
         var formattedData = []
         for (let i = 0; i < data.length; i++) {
             const donor = data[i]
