@@ -46,16 +46,16 @@ $(document).ready(function () {
   // })
 
 
-  // var leaderboard = new Vue({
-  //   el: '#leaderboard-hook',
-  //   data: {
-  //     leaderboard: [
-  //       { donor: '0xabcd', value: '1231254', name: null },
-  //       { donor: '0xefgh', value: '1231254', name: null },
-  //       { donor: '0xjklm', value: '1231254', name: 'test aname' },
-  //     ]
-  //   }
-  // })
+  var leaderboard = new Vue({
+    el: '#leaderboard-hook',
+    data: {
+      leaderboard: [
+        { donor: '0xabcd', value: '1231254', name: null },
+        { donor: '0xefgh', value: '1231254', name: null },
+        { donor: '0xjklm', value: '1231254', name: 'test aname' },
+      ]
+    }
+  })
 
 
   /**

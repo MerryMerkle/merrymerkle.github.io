@@ -664,3 +664,26 @@ div.tooltip {
     border-radius: 8px;
     pointer-events: none;
 }
+
+#leaderboard {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#leaderboard td, #leaderboard th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#leaderboard tr:nth-child(even){background-color: #f2f2f2;}
+
+#leaderboard tr:hover {background-color: #f44242;}
+
+#leaderboard th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
