@@ -7,7 +7,7 @@ var socketServer = 'merrymerkle.intransit.xyz'
 
 $(document).ready(function () {
 
-  var socket = io(socketServer)
+  window.socket = io(socketServer)
 
   /**
    * BANNER STUFF
@@ -23,7 +23,7 @@ $(document).ready(function () {
     data: bannerData
   })
 
-  socket.on(TOTAL_DONATION_VALUE, function (data) {
+  window.socket.on(TOTAL_DONATION_VALUE, function (data) {
     bannerData.donationETH = (new BigNumber(data.value))
       .div(10 ** 18)
       .toFormat(1)
@@ -36,8 +36,8 @@ $(document).ready(function () {
    * LEADERBOARD STUFF
    */
 
-  socket.on(RECENT_DONATION, console.log.bind(console))
-  socket.on(LEADERBOARD, console.log.bind(console))
+  window.socket.on(RECENT_DONATION, console.log.bind(console))
+  window.socket.on(LEADERBOARD, console.log.bind(console))
 
   // Vue.component('donor', {
   //   props: ['donor'],
@@ -61,6 +61,6 @@ $(document).ready(function () {
    * TREE STUFF
    */
 
-  socket.on(LEADERBOARD, console.log.bind(console))
-  socket.on(TIER_REACHED, console.log.bind(console))
+  window.socket.on(LEADERBOARD, console.log.bind(console))
+  window.socket.on(TIER_REACHED, console.log.bind(console))
 })
