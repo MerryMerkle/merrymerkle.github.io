@@ -562,6 +562,12 @@ canvas {
   }
 }
 
+div.tooltip { 
+    position: absolute;     
+    text-align: center;  
+    pointer-events: none;     
+}
+
 @media (max-width: 479px) {
   h1 {
     font-size: 36px;
