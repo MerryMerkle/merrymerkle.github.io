@@ -1,9 +1,3 @@
-// attach tree
-
-// attach leaderboard
-
-// attach donation banner
-
 var RECENT_DONATION = 'RECENT_DONATION'
 var LEADERBOARD = 'LEADERBOARD'
 var TIER_REACHED = 'TIER_REACHED'
