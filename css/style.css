@@ -636,3 +636,12 @@ canvas {
     padding-bottom: 47px;
   }
 }
+
+.mobile-banner.mobile-banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tree-and-board {
+  height: 70vh;
+}
