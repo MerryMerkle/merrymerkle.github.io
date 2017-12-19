@@ -4,16 +4,46 @@
 
 // attach donation banner
 
+var RECENT_DONATION = 'RECENT_DONATION'
+var LEADERBOARD = 'LEADERBOARD'
+var TIER_REACHED = 'TIER_REACHED'
+var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
+
+var socketServer = 'merrymerkle.intransit.xyz'
+
 $(document).ready(function () {
 
-  // maybe you want to use vue here?
+  var socket = io(socketServer)
+
+  /**
+   * BANNER STUFF
+   */
+
+  let bannerData = {
+    donationETH: 'Loading...',
+    donationUSD: '0'
+  }
+
   var banner = new Vue({
     el: '#banner-hook',
-    data: {
-      donationETH: '33',
-      donationUSD: '56,000'
-    }
+    data: bannerData
   })
+
+  socket.on(TOTAL_DONATION_VALUE, function (data) {
+    bannerData.donationETH = (new BigNumber(data.value))
+      .div(10 ** 18)
+      .toFormat(1)
+    bannerData.donationUSD = (new BigNumber(data.inUSD))
+      .div(10 ** 18)
+      .toFormat(2)
+  })
+
+  /**
+   * LEADERBOARD STUFF
+   */
+
+  socket.on(RECENT_DONATION, console.log.bind(console))
+  socket.on(LEADERBOARD, console.log.bind(console))
 
   // Vue.component('donor', {
   //   props: ['donor'],
@@ -31,4 +61,12 @@ $(document).ready(function () {
   //     ]
   //   }
   // })
+
+
+  /**
+   * TREE STUFF
+   */
+
+  socket.on(LEADERBOARD, console.log.bind(console))
+  socket.on(TIER_REACHED, console.log.bind(console))
 })
