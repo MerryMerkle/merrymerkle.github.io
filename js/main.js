@@ -5,7 +5,7 @@ var TIER_REACHED = 'TIER_REACHED'
 var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
 
 var socketServer = 'ws://merrymerkle.intransit.xyz'
-// var socketServer = 'wss://b29b0483.ngrok.io'
+// var socketServer = 'localhost:3000'
 
 $(document).ready(function () {
 
@@ -59,13 +59,9 @@ $(document).ready(function () {
    * LEADERBOARD STUFF
    */
 
-  // Vue.component('donor', {
-  //   props: ['donor'],
-  //   template: '<li>{{donor.name ? donor.name : donor.donor }} - {{ donor.value }}</li>'
-  // })
-
-
   var leaderboardData = {
+    hovered: -1,
+    name: '',
     leaderboard: [
       {
         text: 'Loading...',
@@ -78,7 +74,17 @@ $(document).ready(function () {
 
   var leaderboard = new Vue({
     el: '#leaderboard-hook',
-    data: leaderboardData
+    data: leaderboardData,
+    methods: {
+      onNameSubmit: function (event) {
+        if (!this.name.length) {
+          return
+        }
+
+        // metamask shit here
+        this.name = ''
+      }
+    }
   })
 
   window.socket.on(LEADERBOARD, function (data) {
@@ -156,10 +162,10 @@ $(document).ready(function () {
           .text(data.text)
           .attr("cx", x)
           .attr("cy", y)
-          .attr("r", 20)
+          .attr("r", 30)
           .style("fill", "yellow")
           .on("mouseover", function(d) {
-
+              leaderboardData.hovered = i
               div.transition()
                   .duration(200)
                   .style("opacity", .9);
@@ -168,6 +174,7 @@ $(document).ready(function () {
                   .style("top", d3.select(this).attr("cy") + "px");
               })
           .on("mouseout", function(d) {
+              leaderboardData.hovered = -1
               div.transition()
                   .duration(500)
                   .style("opacity", 0);
@@ -181,7 +188,7 @@ $(document).ready(function () {
           .attr("r", 7)
           .style("fill", Math.floor(Math.random() * 2) % 2 == 0 ? "red" : "green")
           .on("mouseover", function(d) {
-
+              leaderboardData.hovered = i
               div.transition()
                   .duration(200)
                   .style("opacity", .9);
@@ -190,6 +197,7 @@ $(document).ready(function () {
                   .style("top", d3.select(this).attr("cy") + "px");
               })
           .on("mouseout", function(d) {
+              leaderboardData.hovered = -1
               div.transition()
                   .duration(500)
                   .style("opacity", 0);

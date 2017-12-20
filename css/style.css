@@ -642,10 +642,6 @@ canvas {
   padding-bottom: 10px;
 }
 
-.tree-and-board {
-  height: 70vh;
-}
-
 div.tooltip {
     position: absolute;
     text-align: left;
@@ -656,15 +652,32 @@ div.tooltip {
     pointer-events: none;
 }
 
+.tree-and-board {
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#tree-hook {
+  flex: 1;
+}
+
 #leaderboard-hook {
-  padding-right: 0;
-  padding-left: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-container {
+  flex: 1;
+  display: flex;
+  overflow: scroll;
 }
 
 #leaderboard {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  width: 100%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
 }
 
 #leaderboard td, #leaderboard th {
@@ -689,4 +702,36 @@ div.tooltip {
 
 .inline-link {
   color: #000;
+}
+
+.name-submit-form {
+  display: flex;
+  margin-bottom: 0;
+  height: 60px;
+}
+
+.name-submit-form input[type="text"] {
+  flex: 1;
+  border: none;
+  border-left: 1px solid #ddd;
+  outline: none;
+  font-size: 1.5em;
+  height: 100%;
+}
+
+.btn-submit {
+  min-width: 250px;
+  padding: 14px 20px;
+  background-color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  height: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+tbody {
+  width: 100%;
 }

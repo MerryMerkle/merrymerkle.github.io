@@ -46,25 +46,34 @@
     </div>
   </div>
   <div class="tree-and-board">
-    <div class="w-container-fluid">
-      <div class="w-row">
-        <div id="tree-hook" class="w-col w-col-6 w-col-small-6 w-col-tiny-6 w-hidden-tiny">
-        </div>
-        <div id="leaderboard-hook" class="w-col w-col-6 w-col-small-6 w-col-tiny-12">
-          <table id="leaderboard">
-            <tr>
-              <th>Donor</th>
-              <th>ETH</th>
-            </tr>
-            <tr v-for="leader in leaderboard" v-bind:class="{ hover: leader.hovered }">
-              <td>
-                <strong>{{ leader.text }}</strong>
-              </td>
-              <td>{{ leader.displayETH }} ETH</td>
-            </tr>
-          </table>
-        </div>
+    <div id="tree-hook" class="w-hidden-tiny">
+    </div>
+    <div id="leaderboard-hook">
+      <div class="table-container">
+        <table id="leaderboard">
+          <tr>
+            <th>Ornament</th>
+            <th>Amount</th>
+            <th>Donor</th>
+          </tr>
+          <tr v-for="(leader, index) in leaderboard" v-bind:class="{ hover: hovered === index }">
+            <td>
+              {{ index + 1 }}
+              <img class="img-circle" v-if="index === 0" src="images/star-bg.gif">
+            </td>
+            <td>{{ leader.displayETH }} ETH</td>
+            <td>
+              <strong>{{ leader.text }}</strong>
+            </td>
+          </tr>
+        </table>
       </div>
+      <form v-on:submit.prevent="onNameSubmit" class="name-submit-form">
+        <input v-model="name" type="text" placeholder="Register a name with your address" name="name">
+        <button class="w-button btn-submit">
+          Sign with MetaMask
+        </button>
+      </form>
     </div>
   </div>
   <div id="Intro" class="section hero">
