@@ -15,6 +15,7 @@
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/boot.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Roboto:300,regular", "Roboto Condensed:regular"] } });</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -124,21 +125,78 @@
   <div class="section">
     <div id="donate" class="container-3 w-container">
       <h2 class="black-heading">Donate</h2>
-      <p class="paragraph-4">Donate to the Ether Wallet below, or
-        <a href="https://www.covenanthousedonations.ca/sslpage.aspx?pid=1622&source=DIGGWTP-1712MERKLE" target="_blank" class="inline-link">Donate via Credit Card</a>
-      </p>
+      <br/>
+      <br/>
+    <div class="form-group">
+      <label for="amount">Amount</label>
+      <input type="number" class="form-control" id="amount" placeholder="5">      
+    </div>
+    <button id="tx_button" style="background-color: red;" onclick="sendTransaction()" type="button" class="btn btn-secondary btn-lg">Submit</button>    
+
+    <h2 class="black-heading">Sign LeaderBoard</h2>
+    <div class="form-group">
+      <label for="message">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Jimmy">
+    </div>
+   <button id="name_button" style="background-color: green;" onclick="sendName($('#name').val())" type="button" class="btn btn-secondary btn-lg">Submit</button>
+     <script type="text/javascript">
+
+    if (typeof window.web3 === 'undefined') {
+      $('#name_button').set('disabled', true);
+      $('#tx_button').set('disabled', true);
+    }
+
+    var charity = '0x78f47F9E7088F8b55145248C8D3Efd9451acEc47';      
+
+    function sendTransaction () {
+      window.web3.eth.sendTransaction({
+        from: window.web3.eth.accounts[0],
+        to: charity,
+        value: $('#amount').val(),
+        gasLimit: 21000
+      }, function (txhash) {
+        console.log(`transaction sent: ${txhash}`);
+      });
+    }
+
+      function sendName(name) {
+        var hexName = window.web3._extend.utils.toHex(name);
+        var account = window.web3.eth.accounts[0];
+        window.web3.personal.sign(
+          hexName,
+          account,
+          function (err, sig) {
+            if (!err) $.post({data: hexName, sig: sig});
+          });
+      }
+  
+
+
+  </script>
+
+  </div>
+    <br/>
+    <br/>
+
+      <p class="paragraph-4">Or donate to the Ether Wallet below any means!</p>
       <div>
         <div class="eth">
           <p style="word-wrap:break-word; white-space: normal;" id="p1" class="paragraph-3">0x78f47F9E7088F8b55145248C8D3Efd9451acEc47</p>
         </div>
-        <button onclick="copyToClipboard('#p1')">Copy</button>
       </div>
       <img src="images/qr_fundraiser.png" width="314" class="qr">
-      <div class="notice">The wallet only accepts Ether or ERC20 Tokens. Donations made via the Ethereum wallet will not be issued a charitable
-        tax receipt.&nbsp; Donations made by credit card will receive a charitable tax receipt from Covenant House Toronto.&nbsp;
-        Only Ether donations will be considered for the leaderboard and tree.</div>
+      <div>
+        <br/>
+        <br/>
+        <button onclick="copyToClipboard('#p1')">Copy</button>
     </div>
-  </div>
+      <div class="notice"><p>Please note the address above can only accept Ether or ERC20 tokens.</p>
+      <p>Donations made via the Ethereum wallet will not be issued a charitable tax receipt.&nbsp;</p>
+      <p>Donations made by credit card will receive a charitable tax receipt from Covenant House Toronto.&nbsp;</p>
+        <p>Only Ether donations will be considered for the leaderboard and tree. </p>
+    <p class="p7">
+      <a href="https://www.covenanthousedonations.ca/sslpage.aspx?pid=1622&source=DIGGWTP-1712MERKLE" target="_blank" class="link">Donate via Credit Card</a>
+    </p>
   <div class="social-section">
     <div class="w-container">
       <p class="footer red">MADE WITH LOVE IN TORONTO, CANADA AND AROUND THE WORLD</p>
