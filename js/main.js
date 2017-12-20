@@ -4,11 +4,16 @@ var TREE_LEADERBOARD = 'TREE_LEADERBOARD'
 var TIER_REACHED = 'TIER_REACHED'
 var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
 
-var socketServer = 'merrymerkle.intransit.xyz'
+var socketServer = 'ws://merrymerkle.intransit.xyz'
+// var socketServer = 'wss://b29b0483.ngrok.io'
 
 $(document).ready(function () {
 
   window.socket = io(socketServer)
+  window.socket.on('error', console.error.bind(console))
+  window.socket.on('connect', console.log.bind(console))
+  window.socket.on('event', console.log.bind(console))
+  window.socket.on('disconnect', console.log.bind(console))
 
   /**
    * BANNER STUFF
@@ -27,7 +32,7 @@ $(document).ready(function () {
   window.socket.on(TOTAL_DONATION_VALUE, function (data) {
     bannerData.donationETH = (new BigNumber(data.value))
       .div(10 ** 18)
-      .toFormat(1)
+      .toFormat(4)
     bannerData.donationUSD = (new BigNumber(data.inUSD))
       .div(10 ** 18)
       .toFormat(2)

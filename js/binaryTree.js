@@ -12,6 +12,15 @@ $(document).ready(function () {
         return data.value
     }
 
+
+    var initData = [];
+    for(i = 0; i < 31; i++) {
+        initData.push({
+            text: 'Loading...',
+            value: '0.0'
+        })
+    }
+
     /**
      * d3 logic
      */
@@ -127,7 +136,7 @@ $(document).ready(function () {
     function updateTree(data) {
         canvas.selectAll('circle').remove();
         for(i = 0; i < leaves.length; i++) {
-            appendLeaf(canvas, leaves[i].x, leaves[i].y, data[i])
+            appendLeaf(canvas, leaves[i].x, leaves[i].y, data[i] || initData[i])
         }
     }
 
@@ -142,24 +151,16 @@ $(document).ready(function () {
         }
     }
 
-    var initData = [];
-    for(i = 0; i < 31; i++) {
-        initData.push({
-            text: 'Loading...',
-            value: '0.0'
-        })
-    }
-
     var hook = $('#tree-hook')
     generateCoordinates(hook.width() / 2.0, hook.height() * 0.15);
     initTree(initData);
 
     window.socket.on(TREE_LEADERBOARD, function (data) {
         var formattedData = []
-        for (let i = 0; i < data.length; i++) {
-            const donor = data[i]
+        for (let i = 0; i < data.leaderboard.length; i++) {
+            const donor = data.leaderboard[i]
             formattedData.push({
-                value: (new BigNumber(data.value)).div(10 ** 18).format(1),
+                value: (new BigNumber(donor.value)).div(10 ** 18).toFormat(1),
                 text: donor.name || donor.donor
             })
         }
