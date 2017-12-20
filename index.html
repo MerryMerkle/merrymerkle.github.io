@@ -51,18 +51,20 @@
         <div id="tree-hook" class="w-col w-col-6 w-col-small-6 w-col-tiny-6 w-hidden-tiny">
         </div>
         <div id="leaderboard-hook" class="w-col w-col-6 w-col-small-6 w-col-tiny-12">
-            <table id="leaderboard">
-              <tr>
-                <th>Donor</th>
-                <th>Value</th>
-                <th>Name</th>
-              </tr>
-              <tr v-for="leader in leaderboard" >
-                <td>{{ leader.donor }}</td>
-                <td>{{ leader.value }}</td>
-                <td>{{ leader.name }}</td>
-              </tr>
-            </table>
+          <table id="leaderboard">
+            <tr>
+              <th>Donor</th>
+              <th>ETH</th>
+            </tr>
+            <tr v-for="leader in leaderboard" v-bind:class="{ hover: leader.hovered }">
+              <td>
+                <strong v-if="leader.name">{{ leader.name }}</strong>
+                <br v-if="leader.name">
+                <span>{{ leader.donor }}</span>
+              </td>
+              <td>{{ leader.value }}</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

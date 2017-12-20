@@ -665,6 +665,11 @@ div.tooltip {
     pointer-events: none;
 }
 
+#leaderboard-hook {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 #leaderboard {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -678,7 +683,10 @@ div.tooltip {
 
 #leaderboard tr:nth-child(even){background-color: #f2f2f2;}
 
-#leaderboard tr:hover {background-color: #f44242;}
+#leaderboard tr:hover,
+#leaderboard tr.hover {
+  background-color: #f44242;
+}
 
 #leaderboard th {
     padding-top: 12px;

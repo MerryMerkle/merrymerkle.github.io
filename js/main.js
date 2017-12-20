@@ -19,7 +19,7 @@ $(document).ready(function () {
    * BANNER STUFF
    */
 
-  let bannerData = {
+  var bannerData = {
     donationETH: 'Loading...',
     donationUSD: '0'
   }
@@ -42,31 +42,37 @@ $(document).ready(function () {
    * LEADERBOARD STUFF
    */
 
-  window.socket.on(RECENT_DONATION, console.log.bind(console))
-  window.socket.on(LEADERBOARD, console.log.bind(console))
-
   // Vue.component('donor', {
   //   props: ['donor'],
   //   template: '<li>{{donor.name ? donor.name : donor.donor }} - {{ donor.value }}</li>'
   // })
 
 
+  var leaderboardData = {
+    leaderboard: [
+      { donor: '0xabcd', value: '1231254', name: null },
+      { donor: '0xefgh', value: '1231254', name: null },
+      { donor: '0xjklm', value: '1231254', name: 'test aname' },
+    ]
+  }
+
+  formatRawLeaderboardData = function (datas) {
+    for (var i = 0; i < datas.length; i++) {
+      const leader = datas[i]
+      leader.truncatedAddress = leader.donor.slice(0, 8) + '...'
+      leader.displayETH = (new BigNumber(donor.value)).div(10 ** 18).toFormat(4)
+
+    }
+  }
+
+  window.socket.on(RECENT_DONATION, console.log.bind(console))
+
   var leaderboard = new Vue({
     el: '#leaderboard-hook',
-    data: {
-      leaderboard: [
-        { donor: '0xabcd', value: '1231254', name: null },
-        { donor: '0xefgh', value: '1231254', name: null },
-        { donor: '0xjklm', value: '1231254', name: 'test aname' },
-      ]
-    }
+    data: leaderboardData
   })
 
+  window.socket.on(LEADERBOARD, function (data) {
 
-  /**
-   * TREE STUFF
-   */
-
-  window.socket.on(LEADERBOARD, console.log.bind(console))
-  window.socket.on(TIER_REACHED, console.log.bind(console))
+  })
 })
