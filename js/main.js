@@ -41,15 +41,31 @@ $(document).ready(function () {
   /**
    * LEADERBOARD STUFF
    */
+   
+  window.socket.on(RECENT_DONATION, function(data){
+   var recentDonationList = '';
+    for(i = 0; i < data.length; i++){
+        recentDonationList += '<li>' + (data[i].name ? data[i].name : data[i].donor) 
+                            + " " + data[i].value + '</li>';
+    }
+    $("#recent-donation-hook").html(recentDonationList);
+  });
 
-  window.socket.on(RECENT_DONATION, console.log.bind(console))
-  window.socket.on(LEADERBOARD, console.log.bind(console))
+  window.socket.on(LEADERBOARD, function(data){
+   console.log()
+    var leaderboardList = '';
+    for(i = 0; i < data.length; i++){
+        leaderboardList += '<li>' + (data[i].name ? data[i].name : data[i].donor) 
+                            + " " + data[i].value + '</li>';
+    }
+    $("#leaderboard-hook").html(leaderboardList);
+  });
 
   // Vue.component('donor', {
   //   props: ['donor'],
   //   template: '<li>{{donor.name ? donor.name : donor.donor }} - {{ donor.value }}</li>'
   // })
-
+  
 
   // var leaderboard = new Vue({
   //   el: '#leaderboard-hook',
@@ -60,7 +76,7 @@ $(document).ready(function () {
   //       { donor: '0xjklm', value: '1231254', name: 'test aname' },
   //     ]
   //   }
-  // })
+  // });
 
 
   /**
@@ -69,4 +85,4 @@ $(document).ready(function () {
 
   window.socket.on(LEADERBOARD, console.log.bind(console))
   window.socket.on(TIER_REACHED, console.log.bind(console))
-})
+});
