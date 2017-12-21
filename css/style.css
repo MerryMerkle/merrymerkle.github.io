@@ -373,7 +373,7 @@ canvas {
 }
 
 .dogedo {
-  position: fixed;
+  position: absolute;
   right: 0px;
   bottom: 0px;
   overflow: hidden;
