@@ -77,10 +77,16 @@
           </tr>
         </table>
       </div>
-      <form v-if="browserInstalled" v-on:submit.prevent="onNameSubmit" class="name-submit-form">
+      <form v-if="browserInstalled && !addrSigned" v-on:submit.prevent="onNameSubmit" class="name-submit-form">
         <input v-model="name" type="text" placeholder="Register a name with your address" name="name">
         <button class="w-button btn-submit">
           Sign with MetaMask
+        </button>
+      </form>
+      <form v-if="browserInstalled && addrSigned" v-on:submit.prevent="onDonate" class="name-submit-form">
+        <input v-model="amount" type="text" placeholder="ETH amount" name="amount">
+        <button class="w-button btn-submit donate-submit">
+          Donate ETH
         </button>
       </form>
     </div>

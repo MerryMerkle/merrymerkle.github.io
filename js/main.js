@@ -9,6 +9,8 @@ var apiServer = 'whatthefuck.sendcryptopeopletulips.com'
 var socketServer = 'wss://' + apiServer
 var httpApiServer = 'https://' + apiServer
 
+const DONATE_TO = "0x78f47F9E7088F8b55145248C8D3Efd9451acEc47";
+
 $(document).ready(function () {
 
   window.socket = io(socketServer)
@@ -92,8 +94,10 @@ $(document).ready(function () {
 
   var leaderboardData = {
     browserInstalled: false,
+    addrSigned: false,
     hovered: -1,
     name: '',
+    amount: '0.2',
     leaderboard: [
       {
         text: 'Loading...',
@@ -116,6 +120,21 @@ $(document).ready(function () {
     methods: {
       message: function(msg) {
         this.messages.push(msg)
+      },
+      onDonate: function(event) {
+        debugger;
+        window.web3.eth.sendTransaction({
+          from: this.addrSigned,
+          to: DONATE_TO,
+          value: web3.toWei(leaderboard.amount, 'ether'),
+        }, function(err, result) {
+          if (err) {
+            leaderboard.message('Transaction failed: ' + err)
+            console.error(err)
+            return
+          }
+          leaderboard.message('Donation sent! It should arrive soon.')
+        })
       },
       onNameSubmit: function (event) {
         if (!this.name.length) {
@@ -154,6 +173,7 @@ $(document).ready(function () {
                 leaderboard.messages = [] // Reset.
                 leaderboard.message('Success! Name registered to address: ' + addr)
                 leaderboard.name = ''
+                leaderboard.addrSigned = addr
               }
             })
           })

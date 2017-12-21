@@ -773,6 +773,10 @@ tbody {
   margin-left: 0.5em;
 }
 
+.donate-submit {
+  background-color: #41de24;
+}
+
 ul.messages {
   background: #ffbc00;
   margin-bottom: 0;
