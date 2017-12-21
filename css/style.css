@@ -655,7 +655,7 @@ div.tooltip {
 
 .tree-and-board {
   overflow: scroll;
-  height: 70vh;
+  height: 62vh;
   display: flex;
   flex-direction: row;
 }

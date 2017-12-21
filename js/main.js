@@ -280,9 +280,7 @@ $(document).ready(function () {
   leaves = [];
   branches = [];
 
-  function generateCoordinates(x, y) {
-      xspace = 200;
-      yspace = 150;
+  function generateCoordinates(xspace, yspace, x, y) {
       let n = 0;
       for(i = 0; i < indices.length; i++) {
           for(j = 0; j < indices[i].length; j++) {
@@ -339,7 +337,13 @@ $(document).ready(function () {
   }
 
   var hook = $('#tree-hook')
-  generateCoordinates(hook.width() / 2.0, hook.height() * 0.10);
+  console.log(hook.width(), hook.height())
+  generateCoordinates(
+    hook.width() / 4.8,
+    hook.height() / 5,
+    hook.width() / 2.0,
+    hook.height() * 0.10
+  );
   initTree(initData);
 
   window.socket.on(TREE_LEADERBOARD, function (data) {
