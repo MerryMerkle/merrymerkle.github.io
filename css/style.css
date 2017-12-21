@@ -766,3 +766,9 @@ tbody {
 
   z-index: 99;
 }
+
+.button-5 {
+  padding: 0em 1em;
+  background-color: #000;
+  margin-left: 0.5em;
+}
