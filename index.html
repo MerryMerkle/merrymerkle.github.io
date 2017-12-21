@@ -67,7 +67,8 @@
             <td>
               {{ index + 1 }}
               <img class="img-circle" v-if="index === 0" src="images/star-bg.gif">
-              <img class="img-circle" v-if="index <= 10 && index !== 0" src="images/star.png">
+              <img class="img-circle" v-if="index <= 4 && index !== 0" src="images/silver_orn.png">
+              <img class="img-circle" v-if="index <= 9 && index !== 0" src="images/red_orn.png">
             </td>
             <td>{{ leader.displayETH }} ETH</td>
             <td>
