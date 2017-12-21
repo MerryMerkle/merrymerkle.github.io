@@ -1,4 +1,5 @@
 body {
+  position: relative;
   background-color: #fff;
   font-family: Roboto, sans-serif;
   color: #000;
@@ -635,4 +636,133 @@ canvas {
     padding-top: 47px;
     padding-bottom: 47px;
   }
+}
+
+.mobile-banner.mobile-banner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 120px;
+    height: 28px;
+    padding: 2px;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+.tree-and-board {
+  overflow: scroll;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+}
+
+#tree-hook {
+  position: relative;
+  flex: 1;
+}
+
+#leaderboard-hook {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-container {
+  flex: 1;
+  display: flex;
+  overflow: scroll;
+}
+
+#donate {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 30px;
+}
+
+#leaderboard {
+  width: 100%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+#leaderboard td, #leaderboard th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#leaderboard tr:nth-child(even){background-color: #f2f2f2;}
+
+#leaderboard tr:hover,
+#leaderboard tr.hover {
+  background-color: #f44242;
+}
+
+#leaderboard th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.inline-link {
+  color: #000;
+}
+
+.name-submit-form {
+  display: flex;
+  margin-bottom: 0;
+  height: 60px;
+}
+
+.name-submit-form input[type="text"] {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding-left: 5px;
+  outline: none;
+  font-size: 1.5em;
+  height: 100%;
+}
+
+.btn-submit {
+  min-width: 250px;
+  padding: 14px 20px;
+  background-color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  height: 100%;
+}
+
+.img-circle {
+  border-radius: 50%;
+}
+
+tbody {
+  width: 100%;
+}
+
+.donation-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+
+  text-align: center;
+  font-size: 3em;
+
+  background-color: #4CAF50;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 99;
 }
