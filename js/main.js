@@ -115,7 +115,7 @@ $(document).ready(function () {
     data: leaderboardData,
     methods: {
       message: function(msg) {
-        this.messages.push(msg);
+        this.messages.push(msg)
       },
       onNameSubmit: function (event) {
         if (!this.name.length) {
@@ -123,11 +123,20 @@ $(document).ready(function () {
         }
 
         const name = this.name
-        const addr = web3.eth.accounts[0]
-        const hexName = window.web3._extend.utils.toHex(name);
-        window.web3.personal.sign(hexName, addr, function (err, sig) {
+        window.web3.eth.getAccounts(function (err, result) {
+          if (err) {
+            leaderboard.message('No account available: ' + err)
+            return
+          }
+          if (result.length == 0) {
+            leaderboard.message('No account available. Please create or unlock an Ethereum wallet first.')
+            return;
+          }
+          const addr = result[0];
+          const hexName = window.web3._extend.utils.toHex(name);
+          window.web3.personal.sign(hexName, addr, function (err, sig) {
             if (err) {
-              leaderboard.message('error: ' + err)
+              leaderboard.message('Message signing failed: ' + err)
               console.error(err)
               return
             }
@@ -142,12 +151,13 @@ $(document).ready(function () {
                 sig: sig
               },
               success: function () {
-                leaderboard.message('Success! Name registered.')
+                leaderboard.messages = [] // Reset.
+                leaderboard.message('Success! Name registered to address: ' + addr)
                 leaderboard.name = ''
               }
             })
-          }
-        )
+          })
+        })
       }
     }
   })
