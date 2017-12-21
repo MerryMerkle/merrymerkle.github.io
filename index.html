@@ -53,6 +53,9 @@
     <div id="tree-hook" class="w-hidden-tiny w-hidden-small w-hidden-medium">
     </div>
     <div id="leaderboard-hook">
+      <ul class="container messages" v-if="messages.length > 0" v-for="msg of messages">
+        <li>{{ msg }}</li>
+      </ul>
       <div class="table-container">
         <table id="leaderboard">
           <tr>

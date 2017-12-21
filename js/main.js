@@ -99,7 +99,8 @@ $(document).ready(function () {
         text: 'Loading...',
         displayETH: '0.0000'
       }
-    ]
+    ],
+    messages: [],
   }
 
   if (typeof web3 !== 'undefined') {
@@ -113,16 +114,20 @@ $(document).ready(function () {
     el: '#leaderboard-hook',
     data: leaderboardData,
     methods: {
+      message: function(msg) {
+        this.messages.push(msg);
+      },
       onNameSubmit: function (event) {
         if (!this.name.length) {
           return
         }
 
-        var name = this.name
-        var addr = web3.eth.accounts[0]
-        var hexName = window.web3._extend.utils.toHex(name);
+        const name = this.name
+        const addr = web3.eth.accounts[0]
+        const hexName = window.web3._extend.utils.toHex(name);
         window.web3.personal.sign(hexName, addr, function (err, sig) {
             if (err) {
+              leaderboard.message('error: ' + err)
               console.error(err)
               return
             }
@@ -137,7 +142,8 @@ $(document).ready(function () {
                 sig: sig
               },
               success: function () {
-                this.name = ''
+                leaderboard.message('Success! Name registered.')
+                leaderboard.name = ''
               }
             })
           }

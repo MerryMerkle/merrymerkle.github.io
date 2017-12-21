@@ -772,3 +772,9 @@ tbody {
   background-color: #000;
   margin-left: 0.5em;
 }
+
+ul.messages {
+  background: #ffbc00;
+  margin-bottom: 0;
+  padding: 0.5em;
+}
