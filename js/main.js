@@ -337,7 +337,6 @@ $(document).ready(function () {
   }
 
   var hook = $('#tree-hook')
-  console.log(hook.width(), hook.height())
   generateCoordinates(
     hook.width() / 4.8,
     hook.height() / 5,
