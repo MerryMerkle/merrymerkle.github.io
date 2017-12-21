@@ -122,7 +122,6 @@ $(document).ready(function () {
         this.messages.push(msg)
       },
       onDonate: function(event) {
-        debugger;
         window.web3.eth.sendTransaction({
           from: this.addrSigned,
           to: DONATE_TO,
