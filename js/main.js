@@ -4,8 +4,8 @@ var TREE_LEADERBOARD = 'TREE_LEADERBOARD'
 var TIER_REACHED = 'TIER_REACHED'
 var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
 
-//var apiServer = 'whatthefuck.sendcryptopeopletulips.com'
-var apiServer = 'localhost:3000'
+
+var apiServer = 'https://givethmerklenate.herokuapp.com/'
 var socketServer = 'wss://' + apiServer
 var httpApiServer = 'https://' + apiServer
 
