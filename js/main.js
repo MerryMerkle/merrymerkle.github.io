@@ -5,7 +5,7 @@ var TIER_REACHED = 'TIER_REACHED'
 var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
 
 
-var apiServer = 'https://givethmerklenate.herokuapp.com/'
+var apiServer = 'https://128.199.209.90'
 var socketServer = 'wss://' + apiServer
 var httpApiServer = 'https://' + apiServer
 
