@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+}
+
+container {
+  margin: 0px;
+  display: flex;
+  width: 100vh;
+}
