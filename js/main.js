@@ -9,7 +9,7 @@ var apiServer = 'https://128.199.209.90'
 var socketServer = 'wss://' + apiServer
 var httpApiServer = 'https://' + apiServer
 
-const DONATE_TO = "0xD6c10A567A6D06eBb357f7b93195C65eC9F42Ab4";
+const DONATE_TO = "0x1D348f7721Ccc4beA2c4292cea27c94B5883EBd3";
 
 $(document).ready(function () {
 
