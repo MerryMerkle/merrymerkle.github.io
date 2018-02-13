@@ -5,7 +5,7 @@ var TIER_REACHED = 'TIER_REACHED'
 var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
 
 
-var apiServer = 'offchain-leaderboard.giveth.io'
+var apiServer = '128.199.209.90:8080'
 var socketServer = 'wss://' + apiServer
 var httpApiServer = 'https://' + apiServer
 
