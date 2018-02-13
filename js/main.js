@@ -7,7 +7,7 @@ var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
 
 var apiServer = 'offchain-leaderboard.giveth.io'
 var socketServer = 'wss://' + apiServer
-var httpApiServer = 'http://' + apiServer
+var httpApiServer = 'https://' + apiServer
 
 const DONATE_TO = "0x1D348f7721Ccc4beA2c4292cea27c94B5883EBd3";
 
