@@ -4,12 +4,12 @@ var TREE_LEADERBOARD = 'TREE_LEADERBOARD'
 var TIER_REACHED = 'TIER_REACHED'
 var TOTAL_DONATION_VALUE = 'TOTAL_DONATION_VALUE'
 
-var apiServer = 'whatthefuck.sendcryptopeopletulips.com'
-// var apiServer = 'localhost:3000'
-var socketServer = 'wss://' + apiServer
-var httpApiServer = 'https://' + apiServer
 
-const DONATE_TO = "0x78f47F9E7088F8b55145248C8D3Efd9451acEc47";
+var apiServer = 'offchain-leaderboard.giveth.io'
+var socketServer = 'wss://' + apiServer
+var httpApiServer = 'http://' + apiServer
+
+const DONATE_TO = "0x1D348f7721Ccc4beA2c4292cea27c94B5883EBd3";
 
 $(document).ready(function () {
 
