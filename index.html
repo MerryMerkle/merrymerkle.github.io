@@ -14,7 +14,7 @@
   <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/boot.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css?2" rel="stylesheet" type="text/css">
+  <link href="css/style.css?3" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Roboto:300,regular", "Roboto Condensed:regular"] } });</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -27,7 +27,7 @@
     <div class="w-container">
       <div class="w-row">
         <div class="left-nav w-col w-col-6 w-col-small-6 w-col-tiny-6">
-          <a href="index.html" class="w-inline-block">
+          <a href="index.html" class="w-inline-block w--current">
             <img src="images/merrymerkle_MMT.png" srcset="images/merrymerkle_MMT-p-500.png 500w, images/merrymerkle_MMT.png 750w" sizes="(max-width: 479px) 43vw, 120px"
               class="mmt-logo">
           </a>
@@ -44,51 +44,690 @@
   <div class="section hero mobile-banner">
     <div id="banner-hook" class="container w-container">
       <h1 class="heading">
-        {{ donationETH }} ETH (≈ ${{ donationCAD }} CAD) raised so far!
-        <a href="#donate" class="button-5 w-button">Donate</a>
+        134.7336 ETH (≈ $148,840.79 CAD) raised in total!
       </h1>
     </div>
   </div>
   <div class="tree-and-board">
     <div id="tree-hook" class="w-hidden-tiny w-hidden-small w-hidden-medium">
+      <svg width="100%" height="100%">
+        <line stroke-width="5" x1="480" y1="67" x2="280" y2="201" style="stroke: green;"></line>
+        <line stroke-width="5" x1="480" y1="67" x2="680" y2="201" style="stroke: green;"></line>
+        <line stroke-width="5" x1="280" y1="201" x2="180" y2="335" style="stroke: green;"></line>
+        <line stroke-width="5" x1="280" y1="201" x2="380" y2="335" style="stroke: green;"></line>
+        <line stroke-width="5" x1="680" y1="201" x2="580" y2="335" style="stroke: green;"></line>
+        <line stroke-width="5" x1="680" y1="201" x2="780" y2="335" style="stroke: green;"></line>
+        <line stroke-width="5" x1="180" y1="335" x2="113.33333333333333" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="180" y1="335" x2="246.66666666666669" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="380" y1="335" x2="313.3333333333333" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="380" y1="335" x2="446.6666666666667" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="580" y1="335" x2="513.3333333333334" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="580" y1="335" x2="646.6666666666666" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="780" y1="335" x2="713.3333333333334" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="780" y1="335" x2="846.6666666666666" y2="469" style="stroke: green;"></line>
+        <line stroke-width="5" x1="113.33333333333333" y1="469" x2="63.33333333333333" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="113.33333333333333" y1="469" x2="163.33333333333331" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="246.66666666666669" y1="469" x2="196.66666666666669" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="246.66666666666669" y1="469" x2="296.6666666666667" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="313.3333333333333" y1="469" x2="263.3333333333333" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="313.3333333333333" y1="469" x2="363.3333333333333" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="446.6666666666667" y1="469" x2="396.6666666666667" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="446.6666666666667" y1="469" x2="496.6666666666667" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="513.3333333333334" y1="469" x2="463.33333333333337" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="513.3333333333334" y1="469" x2="563.3333333333334" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="646.6666666666666" y1="469" x2="596.6666666666666" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="646.6666666666666" y1="469" x2="696.6666666666666" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="713.3333333333334" y1="469" x2="663.3333333333334" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="713.3333333333334" y1="469" x2="763.3333333333334" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="846.6666666666666" y1="469" x2="796.6666666666666" y2="603" style="stroke: green;"></line>
+        <line stroke-width="5" x1="846.6666666666666" y1="469" x2="896.6666666666666" y2="603" style="stroke: green;"></line>
+        <circle cx="480" cy="67" r="30" style="fill: yellow;">Polychain Capital Team</circle>
+        <circle cx="280" cy="201" r="15" style="fill: red;">Token Foundry (www.tokenfoundry.io) </circle>
+        <circle cx="680" cy="201" r="15" style="fill: green;">Team Status</circle>
+        <circle cx="180" cy="335" r="15" style="fill: red;">Team Cryptiv</circle>
+        <circle cx="380" cy="335" r="15" style="fill: green;">Polymath - Big Blue Bull</circle>
+        <circle cx="580" cy="335" r="15" style="fill: red;">AidCoin Team</circle>
+        <circle cx="780" cy="335" r="15" style="fill: red;">Quantstamp - Proof of Caring</circle>
+        <circle cx="113.33333333333333" cy="469" r="15" style="fill: green;">🎉 Zeppelin 🎉</circle>
+        <circle cx="246.66666666666669" cy="469" r="15" style="fill: red;">Joanne and Fred Wilson</circle>
+        <circle cx="313.3333333333333" cy="469" r="15" style="fill: green;">🦊 The MetaMasketeers 🦊</circle>
+        <circle cx="446.6666666666667" cy="469" r="15" style="fill: red;">nullc</circle>
+        <circle cx="513.3333333333334" cy="469" r="15" style="fill: red;">0x56c915758ad3f76fd287fff7563ee313142fb663</circle>
+        <circle cx="646.6666666666666" cy="469" r="15" style="fill: green;">Team 0x 🚀</circle>
+        <circle cx="713.3333333333334" cy="469" r="15" style="fill: red;">team ælf</circle>
+        <circle cx="846.6666666666666" cy="469" r="15" style="fill: green;">Cyber Fund</circle>
+        <circle cx="63.33333333333333" cy="603" r="15" style="fill: red;">🎅 Team Augur 🎅</circle>
+        <circle cx="163.33333333333331" cy="603" r="15" style="fill: green;">Blockgeeks </circle>
+        <circle cx="196.66666666666669" cy="603" r="15" style="fill: red;">0x0370c026b24830fe64e9b7f3c70cf0b4d65b2e3f</circle>
+        <circle cx="296.6666666666667" cy="603" r="15" style="fill: red;">Bounty0x - Christmas Bounty</circle>
+        <circle cx="263.3333333333333" cy="603" r="15" style="fill: green;">Team Truebit &lt;3</circle>
+        <circle cx="363.3333333333333" cy="603" r="15" style="fill: red;">Protocol Labs</circle>
+        <circle cx="396.6666666666667" cy="603" r="15" style="fill: red;">Citizen Hex</circle>
+        <circle cx="496.6666666666667" cy="603" r="15" style="fill: red;">Chase</circle>
+        <circle cx="463.33333333333337" cy="603" r="15" style="fill: green;">Griff Green</circle>
+        <circle cx="563.3333333333334" cy="603" r="15" style="fill: red;">All you need is love</circle>
+        <circle cx="596.6666666666666" cy="603" r="15" style="fill: green;">0x01e4276d3e42dfffbb38f7d01404175e4c480315</circle>
+        <circle cx="696.6666666666666" cy="603" r="15" style="fill: green;">Robbie Bent</circle>
+        <circle cx="663.3333333333334" cy="603" r="15" style="fill: red;">Bounty0x Brought Me Here &lt;3 </circle>
+        <circle cx="763.3333333333334" cy="603" r="15" style="fill: green;">0xedb328a8641738818420cec27652d16228660ffa</circle>
+        <circle cx="796.6666666666666" cy="603" r="15" style="fill: green;">0x35713c4a579ddecbfc69ba5c4f5827da46114566</circle>
+        <circle cx="896.6666666666666" cy="603" r="15" style="fill: red;">Pactum</circle>
+      </svg>
+      <div class="tooltip" style="opacity: 0;"></div>
     </div>
     <div id="leaderboard-hook">
-      <ul class="container messages" v-if="messages.length > 0" v-for="msg of messages">
-        <li>{{ msg }}</li>
-      </ul>
       <div class="table-container">
         <table id="leaderboard">
-          <tr>
-            <th>Ornament</th>
-            <th>Amount</th>
-            <th>Donor</th>
-          </tr>
-          <tr v-for="(leader, index) in leaderboard" v-bind:class="{ hover: hovered === index }">
-            <td>
-              {{ index + 1 }}
-              <img class="img-circle" v-if="index === 0" src="images/star-bg.gif">
-              <img class="img-circle" v-if="index <= 4 && index !== 0" src="images/silver_orn.png">
-              <img class="img-circle" v-if="index > 4 && index <= 9" src="images/red_orn.png">
-            </td>
-            <td>{{ leader.displayETH }} ETH</td>
-            <td>
-              <strong>{{ leader.text }}</strong>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <th>Ornament</th>
+              <th>Amount</th>
+              <th>Donor</th>
+            </tr>
+            <tr class="">
+              <td>
+                1
+                <img src="images/star-bg.gif" class="img-circle">
+                <!---->
+                <!---->
+              </td>
+              <td>18.5000 ETH</td>
+              <td>
+                <strong>Polychain Capital Team</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                2
+                <!---->
+                <img src="images/silver_orn.png" class="img-circle">
+                <!---->
+              </td>
+              <td>10.4000 ETH</td>
+              <td>
+                <strong>Token Foundry (www.tokenfoundry.io) </strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                3
+                <!---->
+                <img src="images/silver_orn.png" class="img-circle">
+                <!---->
+              </td>
+              <td>7.7100 ETH</td>
+              <td>
+                <strong>Team Status</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                4
+                <!---->
+                <img src="images/silver_orn.png" class="img-circle">
+                <!---->
+              </td>
+              <td>7.6900 ETH</td>
+              <td>
+                <strong>Team Cryptiv</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                5
+                <!---->
+                <img src="images/silver_orn.png" class="img-circle">
+                <!---->
+              </td>
+              <td>7.3331 ETH</td>
+              <td>
+                <strong>Polymath - Big Blue Bull</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                6
+                <!---->
+                <!---->
+                <img src="images/red_orn.png" class="img-circle">
+              </td>
+              <td>6.0082 ETH</td>
+              <td>
+                <strong>AidCoin Team</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                7
+                <!---->
+                <!---->
+                <img src="images/red_orn.png" class="img-circle">
+              </td>
+              <td>6.0081 ETH</td>
+              <td>
+                <strong>Quantstamp - Proof of Caring</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                8
+                <!---->
+                <!---->
+                <img src="images/red_orn.png" class="img-circle">
+              </td>
+              <td>5.5555 ETH</td>
+              <td>
+                <strong>🎉 Zeppelin 🎉</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                9
+                <!---->
+                <!---->
+                <img src="images/red_orn.png" class="img-circle">
+              </td>
+              <td>5.5000 ETH</td>
+              <td>
+                <strong>Joanne and Fred Wilson</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                10
+                <!---->
+                <!---->
+                <img src="images/red_orn.png" class="img-circle">
+              </td>
+              <td>5.2500 ETH</td>
+              <td>
+                <strong>🦊 The MetaMasketeers 🦊</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                11
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>5.2000 ETH</td>
+              <td>
+                <strong>nullc</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                12
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>5.0000 ETH</td>
+              <td>
+                <strong>0x56c915758ad3f76fd287fff7563ee313142fb663</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                13
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>5.0000 ETH</td>
+              <td>
+                <strong>Team 0x 🚀</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                14
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>5.0000 ETH</td>
+              <td>
+                <strong>team ælf</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                15
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>5.0000 ETH</td>
+              <td>
+                <strong>Cyber Fund</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                16
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>5.0000 ETH</td>
+              <td>
+                <strong>🎅 Team Augur 🎅</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                17
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>4.3675 ETH</td>
+              <td>
+                <strong>Blockgeeks </strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                18
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>3.0000 ETH</td>
+              <td>
+                <strong>0x0370c026b24830fe64e9b7f3c70cf0b4d65b2e3f</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                19
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>2.1000 ETH</td>
+              <td>
+                <strong>Bounty0x - Christmas Bounty</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                20
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>2.0000 ETH</td>
+              <td>
+                <strong>Team Truebit &lt;3</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                21
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>1.9900 ETH</td>
+              <td>
+                <strong>Protocol Labs</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                22
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>1.3370 ETH</td>
+              <td>
+                <strong>Citizen Hex</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                23
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>1.2500 ETH</td>
+              <td>
+                <strong>Chase</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                24
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>1.1111 ETH</td>
+              <td>
+                <strong>Griff Green</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                25
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.6327 ETH</td>
+              <td>
+                <strong>All you need is love</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                26
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.6078 ETH</td>
+              <td>
+                <strong>0x01e4276d3e42dfffbb38f7d01404175e4c480315</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                27
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.5583 ETH</td>
+              <td>
+                <strong>Robbie Bent</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                28
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.5100 ETH</td>
+              <td>
+                <strong>Bounty0x Brought Me Here &lt;3 </strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                29
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.5005 ETH</td>
+              <td>
+                <strong>0xedb328a8641738818420cec27652d16228660ffa</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                30
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.5000 ETH</td>
+              <td>
+                <strong>0x35713c4a579ddecbfc69ba5c4f5827da46114566</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                31
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.4000 ETH</td>
+              <td>
+                <strong>Pactum</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                32
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.3000 ETH</td>
+              <td>
+                <strong>0x5cb479db92ce3572383837c9775639dc373e4194</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                33
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.2044 ETH</td>
+              <td>
+                <strong>0xeed16856d551569d134530ee3967ec79995e2051</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                34
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.2000 ETH</td>
+              <td>
+                <strong>Satoshi</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                35
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.2000 ETH</td>
+              <td>
+                <strong>0x90c690e194ac53564b2e03ad2b54953d6266afb2</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                36
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1950 ETH</td>
+              <td>
+                <strong>0x7eee1ec1ebfca72baef8c6b5a2ea112f752def4a</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                37
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1861 ETH</td>
+              <td>
+                <strong>0x4e2b1494b241803cba467f11cf077243b147643b</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                38
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1850 ETH</td>
+              <td>
+                <strong>0x267be1c1d684f78cb4f6a176c4911b741e4ffdc0</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                39
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1700 ETH</td>
+              <td>
+                <strong>0xc769f86f13a003f76824c61f65077e1cd25181e4</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                40
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1500 ETH</td>
+              <td>
+                <strong>0x7221b104fba7701084759fd25faca19ac6300855</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                41
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1394 ETH</td>
+              <td>
+                <strong>0x00d58ad7cc9ce62b9b160af259e4d15bb496df0a</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                42
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1280 ETH</td>
+              <td>
+                <strong>0xf9cfc99f8c7e3c007d072298da3fea4db2a15439</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                43
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1198 ETH</td>
+              <td>
+                <strong>0xb77ff986f65be28300bba162efe2bc5ad1cfb966</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                44
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1000 ETH</td>
+              <td>
+                <strong>0xb6aac3b56ff818496b747ea57fcbe42a9aae6218</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                45
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1000 ETH</td>
+              <td>
+                <strong>0x3ba09bcb644a82ecd80a83abeb01a318b51f4352</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                46
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1000 ETH</td>
+              <td>
+                <strong>🦅</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                47
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1000 ETH</td>
+              <td>
+                <strong>0xdf842962c53ac967e3431803344e97b6b7b46f6b</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                48
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1000 ETH</td>
+              <td>
+                <strong>0xd93c5b5ad28b95cc9f422c99ecbc2eb62ddf3f7b</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                49
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.1000 ETH</td>
+              <td>
+                <strong>0x0a00c7d9080b5ea96d87027222289502af24ebba</strong>
+              </td>
+            </tr>
+            <tr class="">
+              <td>
+                50
+                <!---->
+                <!---->
+                <!---->
+              </td>
+              <td>0.0971 ETH</td>
+              <td>
+                <strong>0x5b4c3e8ff02896b0400e19adce5e10d2d82694b0</strong>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </div>
-      <form v-if="browserInstalled && !addrSigned" v-on:submit.prevent="onNameSubmit" class="name-submit-form">
-        <input v-model="name" type="text" placeholder="Register a name with your address" name="name">
-        <button class="w-button btn-submit">
-          Sign with MetaMask
-        </button>
-      </form>
-      <form v-if="browserInstalled && addrSigned" v-on:submit.prevent="onDonate" class="name-submit-form">
-        <input v-model="amount" type="text" placeholder="ETH amount" name="amount">
-        <button class="w-button btn-submit donate-submit">
-          Donate ETH
-        </button>
-      </form>
+      <!---->
     </div>
   </div>
 
@@ -97,10 +736,10 @@
       <h1 class="heading">A Christmas tree lit up by crypto donations from around the world, powered by Ethereum.</h1>
       <div id="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/2eyWzcwXONE" frameborder="0" gesture="media" allow="encrypted-media"
-          allowfullscreen></iframe>
+          allowfullscreen=""></iframe>
       </div>
       <p class="paragraph-2">Merry Merkle tree is a decentralized giving project enabled by the Ethereum Blockchain. This holiday season, we’re
-        challenging the Toronto and global crypto community&#x27;s generosity in donating what they can to a Toronto homeless
+        challenging the Toronto and global crypto community's generosity in donating what they can to a Toronto homeless
         youth shelter (Covenant House) via the “Merry Merkle Tree” structure!</p>
       <a href="#donate" class="button-3 w-button">Donate</a>
       <a href="#covenant" class="button-3 w-button">Learn More</a>
@@ -115,34 +754,46 @@
     <div id="covenant" class="container-3 w-container">
       <h2 class="black-heading">Thank You to the blockchain community!</h2>
       <p class="paragraph-4">Merry Merkle Initiative has raised over
-        <strong>$200,000 CAD</strong> this holiday season in support of programs at Covenant House Toronto, Canada’s largest agency serving at-risk, homeless and trafficked youth.
-        <br><br /> This astounding contribution will make a huge difference in the lives of vulnerable youth by providing nearly <strong> nine months</strong> of food and shelter for approximately <strong>100</strong> youth a day.
+        <strong>$200,000 CAD</strong> this holiday season in support of programs at Covenant House Toronto, Canada’s largest agency
+        serving at-risk, homeless and trafficked youth.
+        <br>
+        <br /> This astounding contribution will make a huge difference in the lives of vulnerable youth by providing nearly
+        <strong>
+        nine months</strong> of food and shelter for approximately
+        <strong>100</strong> youth a day.
 
-      <h2 class="black-heading">Message from Covenant House</h2>
-      <p class="paragraph-4"><i>"We are truly grateful to everyone who came together to create an amazing event so that we could receive our very first cryptocurrency donations,”</i>-- says <strong>Bruce Rivers</strong>, Executive Director of Covenant House Toronto. <Br /><br /><i>“The cryptocurrency community is an incredibly generous group of people, and this event just goes to show what a difference you can make when you team up in support of a cause."</i>
-      </p>
-      <div>
-        <img class="kid-left" sizes="(max-width: 767px) 35vw, (max-width: 991px) 254.796875px, 329px" src="images/left.jpg" srcset="images/left.jpg 500w, images/left.jpg 750w">
-        <img class="kid-right" sizes="(max-width: 767px) 35vw, (max-width: 991px) 254.796875px, 329px" src="images/right.jpg" srcset="images/right.jpg 500w, images/right.jpg 750w">
-      </div>
-      <h2 class="black-heading">Covenant House</h2>
-      <p class="paragraph-5">As Canada’s largest agency serving at-risk, homeless and trafficked youth, Covenant House Toronto provides the widest
-        range of services and support to as many as 250 youth a day. More than a place to stay, we provide 24/7 crisis shelter
-        and transitional housing on-site and in the community, along with comprehensive services including education, counselling,
-        health care, employment assistance, job training and aftercare.
-        <br>
-        <br>To do all this, we rely on donors for more than 80 percent of our $27-million annual operating budget. Our doors
-        are open to youth 16 to 24 regardless of race, religion, sexual orientation, gender identity or the circumstances
-        that have brought them to our doors.
-        <br>
-        <br>Since opening our doors in 1982, Covenant House has served almost 95,000 young people.</p>
-      <a href="https://www.covenanthousetoronto.ca" target="_blank" class="link">Learn more about the Covenant House.</a>
-      <div id="donate">
-        <h2 class="black-heading">Donate</h2>
+        <h2 class="black-heading">Message from Covenant House</h2>
         <p class="paragraph-4">
-          <a href="https://www.covenanthousedonations.ca/sslpage.aspx?pid=1622&source=DIGGWTP-1712MERKLE" target="_blank" class="inline-link">Donate via Credit Card</a>
+          <i>"We are truly grateful to everyone who came together to create an amazing event so that we could receive our very
+            first cryptocurrency donations,”</i>-- says
+          <strong>Bruce Rivers</strong>, Executive Director of Covenant House Toronto.
+          <Br />
+          <br />
+          <i>“The cryptocurrency community is an incredibly generous group of people, and this event just goes to show what
+            a difference you can make when you team up in support of a cause."</i>
         </p>
-      </div>
+        <div>
+          <img class="kid-left" sizes="(max-width: 767px) 35vw, (max-width: 991px) 254.796875px, 329px" src="images/left.jpg" srcset="images/left.jpg 500w, images/left.jpg 750w">
+          <img class="kid-right" sizes="(max-width: 767px) 35vw, (max-width: 991px) 254.796875px, 329px" src="images/right.jpg" srcset="images/right.jpg 500w, images/right.jpg 750w">
+        </div>
+        <h2 class="black-heading">Covenant House</h2>
+        <p class="paragraph-5">As Canada’s largest agency serving at-risk, homeless and trafficked youth, Covenant House Toronto provides the widest
+          range of services and support to as many as 250 youth a day. More than a place to stay, we provide 24/7 crisis
+          shelter and transitional housing on-site and in the community, along with comprehensive services including education,
+          counselling, health care, employment assistance, job training and aftercare.
+          <br>
+          <br>To do all this, we rely on donors for more than 80 percent of our $27-million annual operating budget. Our doors
+          are open to youth 16 to 24 regardless of race, religion, sexual orientation, gender identity or the circumstances
+          that have brought them to our doors.
+          <br>
+          <br>Since opening our doors in 1982, Covenant House has served almost 95,000 young people.</p>
+        <a href="https://www.covenanthousetoronto.ca" target="_blank" class="link">Learn more about the Covenant House.</a>
+        <div id="donate">
+          <h2 class="black-heading">Donate</h2>
+          <p class="paragraph-4">
+            <a href="https://www.covenanthousedonations.ca/sslpage.aspx?pid=1622&source=DIGGWTP-1712MERKLE" target="_blank" class="inline-link">Donate via Credit Card</a>
+          </p>
+        </div>
     </div>
   </div>
   <div class="social-section">
@@ -158,20 +809,10 @@
       </div>
     </div>
   </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/5.0.0/bignumber.min.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://d3js.org/d3.v4.js"></script>
-  <script src="https://unpkg.com/d3-canvas-transition@0.3.7/build/d3-canvas-transition.js"></script>
-  <script src="https://unpkg.com/d3-quant@0.4.2/build/d3-quant.js"></script>
-  <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-  <script src="js/web3-light.min.js" type="text/javascript"></script>
   <script src="js/boot.js" type="text/javascript"></script>
   <script src="js/copy.js" type="text/javascript"></script>
-  <script src="js/main.js?2" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script>
   <script>
     switch (window.location.hostname) {
       case "localhost":
@@ -183,6 +824,9 @@
         ga('send', 'pageview');
     }
   </script>
+
+
+
 
 </body>
 
